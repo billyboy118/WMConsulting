@@ -563,7 +563,7 @@ a:focus, a:hover {
 }
 
 .hero-area {
-  background-image: url("random.jpg");
+  background-image: url(asset-path("random.jpg"));
   background-size: cover;
   height: 100vh;
   position: relative;
