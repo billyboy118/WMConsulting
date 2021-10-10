@@ -562,8 +562,13 @@ a:focus, a:hover {
   margin: 0;
 }
 
+
+
+
+
 .hero-area {
-  background-image: url(asset-path("random.jpg"));
+  background-image: url(asset-path("slider-bg-1.jpg"));
+
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -572,9 +577,14 @@ a:focus, a:hover {
   align-items: center;
 }
 
+.tint {
+  background-color: rgba(43, 41, 39, 0.5); /* Tint color */
+  background-blend-mode: multiply;
+}
+
 // .hero-area:before {
 //   content: '';
-//   background: rgba(0, 0, 0, 0.63);
+//   background: rgba(0, 0, 0, 0.60);
 //   position: absolute;
 //   top: 0;
 //   right: 0;
@@ -887,7 +897,7 @@ a:focus, a:hover {
 ==================================================================*/
 .call-to-action-2 {
   padding: 100px 0;
-  background-image: url("../images/call-to-action/call-to-action-bg.jpg");
+  background-image: url(asset-path("call-to-action-bg-2.jpg"));
   background-size: cover;
   color: #fff;
 }
