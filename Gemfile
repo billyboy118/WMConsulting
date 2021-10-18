@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jquery-slick-rails"
 # for icons
 gem 'octicons_helper'
+# for mail form
+gem 'mail_form'
