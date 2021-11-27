@@ -1,0 +1,60 @@
+
+<body id="body" >
+
+
+  <section class="resources-page-header hero-area-tint">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Resources</h2>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+    <section class="contact-us" id="contact">
+    <div class="container">
+  		<div class="row">
+        <div class="contact-details col-md-6" >
+          <% if edit %>
+            <h3>Edit Entry</h3>
+          <% else %>
+            <h3>Create New Entry</h3>
+          <% end %>
+        </div>
+      </div>
+
+      <% if edit %>      
+         <%= form_with model: @site, url: web_site_path, method: :patch do |form| %>
+          <%= form.radio_button :option, 'web' %>Web<br> 
+          <%= form.radio_button :option, 'code' %>Code<br> 
+          <%= form.label :topic, "Topic" %>
+          <%= form.text_field :topic, class: "form-control" %>
+          <%= form.label :language, "Language" %>
+          <%= form.text_field :language, class: "form-control" %>
+          <%= form.label :description, "Description" %>
+          <%= form.text_field :description, class: "form-control" %>
+          <%= form.label :address, "address" %>
+          <%= form.text_area :address, rows: 8, class: "form-control" %>
+          <%= form.submit "Submit" %>
+        <% end %>
+      <% else %>
+        <%= form_with model: @site, url: web_site_index_path, method: :post do |form| %>
+          <%= form.radio_button :option, 'web' %>Web<br> 
+          <%= form.radio_button :option, 'code' %>Code<br> 
+          <%= form.label :topic, "Topic" %>
+          <%= form.text_field :topic, class: "form-control" %>
+          <%= form.label :language, "Language" %>
+          <%= form.text_field :language, class: "form-control" %>
+          <%= form.label :description, "Description" %>
+          <%= form.text_field :description, class: "form-control" %>
+          <%= form.label :address, "address" %>
+          <%= form.text_area :address, rows: 8, class: "form-control" %>
+          <%= form.submit "Submit" %>
+        <% end %>
+      <% end %>
+</section>
+
+
+</body>

@@ -4,6 +4,9 @@
 // that code so it'll be compiled.
 
 //= require jquery.slick
+//= require jquery
+//= require jquery_ujs
+
 
 import 'bootstrap'
 import Rails from "@rails/ujs"
@@ -12,6 +15,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../navscroll'
 import '../preloader'
+
 
 
 

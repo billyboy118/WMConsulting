@@ -1,7 +1,7 @@
 class ContactController < ApplicationController
 
   before_action :contact_params, only: [:create]
-  def index
+  def new
     @contact = Contact.new
   end
 
