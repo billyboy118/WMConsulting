@@ -1,17 +1,5 @@
 
-
-<body id="body" >
-
-
-<section class="single-page-header hero-area-tint">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Contact Us</h2>
-			</div>
-		</div>
-	</div>
-</section>
+<%= render "layouts/banner", imgClass: "single-page-header", title: "Contact  Us" %>
 
  <!--Start Contact Us
 	=========================================== -->		
@@ -19,11 +7,8 @@
 	<div class="container">
 		<div class="row">
 
-      <% flash.each do |type, msg| %>
-        <div class="alert alert-info">
-        <%= msg %>
-      </div>
-   	 <% end %>
+				 <%= render "layouts/alerts" %>
+   	
 			
 			<!-- Contact Details -->
 			<div class="contact-details col-md-6 " >
@@ -93,8 +78,3 @@
     </div>
   </div>
 </section>  
-
-
-
-
-</body>

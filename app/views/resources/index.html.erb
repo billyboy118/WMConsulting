@@ -1,17 +1,7 @@
 
-<body id="body" >
+<%= render "layouts/banner", imgClass: "resources-page-header", title: "Resources" %>
+<%= render "layouts/alerts" %>
 
-
-  <section class="resources-page-header hero-area-tint">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Resources</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<p>Throughout my time learnign to code I have written down some key sites and bits of code I have found useful. Looking back at some of this now it seems easier than I remember. Crfeating  this also gave me practice in using models etc in rails and importing a CSV file into postgres </p>
 <%= link_to "Key Websites", web_site_index_path %>
 
-</body>
