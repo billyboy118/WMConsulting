@@ -4,7 +4,16 @@
     <nav id="mynav" class="navbar navbar-expand-lg navbar-light">
       <!-- logo -->
 
-      <p id="nav-text" class="navbar-brand logo" style="font-size: 35px; color: #0a0707; padding-right: 20px ">WM Consulting</p>
+
+      <ul class="navbar-nav">
+        <div class="nav-item ">
+          <%= link_to "Free Freelancer", root_path, id: "nav-text", class: "nav-link" %>
+        </div>
+      </ul>
+
+
+
+      
        <a class="navbar-brand" href="https://www.linkedin.com/in/william-matley/">
       <%# <img class="logo-default" src="images/logo.png" alt="logo"/> %>
       <%= image_tag "linkedin-icon.png" %>
@@ -16,6 +25,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+ 
+
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
 					<li class="nav-item">
@@ -25,6 +36,9 @@
 						<%= link_to "Resources", resources_path, class: "nav-link" %>
 					</li>
 
+
+
+    
 
 
           <!--<li class="nav-item dropdown active">
@@ -38,21 +52,7 @@
               <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
             </div> -
           </li> -->
-       <!--   <li class="nav-item ">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="service.html">Services</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="team.html">Team</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="pricing.html">Pricing</a>
-          </li> -->
+
           <li class="nav-item ">
             <%= link_to "Contact", contact_index_path, class: "nav-link" %>
           </li>

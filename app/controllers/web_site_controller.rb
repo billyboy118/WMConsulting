@@ -1,4 +1,7 @@
 class WebSiteController < ApplicationController
+
+  before_action :authenticate_user!, except: [:index]
+
   def index
     @sites = Site.all
   end
@@ -14,7 +17,11 @@ class WebSiteController < ApplicationController
     @site = Site.find(params[:id])
 
     if @site.update(site_params)
-      redirect_to web_site_index_path, notice: 'Entry Edited'
+      if @site.option == 'web'
+        redirect_to web_site_index_path, notice: 'Entry Saved'
+      else
+        redirect_to code_resource_index_path, notice: 'Entry Saved'
+      end
     else
       render :edit
     end
@@ -32,14 +39,14 @@ class WebSiteController < ApplicationController
     @site = Site.new(site_params)
 
     if @site.save
-      redirect_to web_site_index_path, notice: 'Entry Saved'
+      if @site.option == 'web'
+        redirect_to web_site_index_path, notice: 'Entry Saved'
+      else
+        redirect_to code_resource_index_path, notice: 'Entry Saved'
+      end
     else
       render :new
     end
-  end
-
-  def show
-    # destroy
   end
 
   private
@@ -47,5 +54,4 @@ class WebSiteController < ApplicationController
   def site_params
     params.require(:site).permit(:topic, :language, :description, :address, :option)
   end
-
 end

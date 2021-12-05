@@ -906,10 +906,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@popperjs/core@2.0.0-alpha.1":
-  version "2.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.0.0-alpha.1.tgz#027e88eb5d890b87942b3188cdc99a50786ad854"
-  integrity sha512-AEw/mCzKVPweZMy6DAeLQT2xDUtoHWL4I2v2/091Yr3M6RL5v2I786/3Ln1W19eO5/FoimUUtI6L8CpAp06Txw==
+"@popperjs/core@^2.11.0":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.0.tgz#6734f8ebc106a0860dff7f92bf90df193f0935d7"
+  integrity sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==
 
 "@rails/actioncable@^6.0.0":
   version "6.1.4"
@@ -1205,6 +1205,11 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
+
+animate.css@~3.5.0:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.5.2.tgz#91e668dc069a808e5e499514867b97aae0166c36"
+  integrity sha1-keZo3AaagI5eSZUUhnuXquAWbDY=
 
 ansi-colors@^3.0.0:
   version "3.2.4"
@@ -3795,7 +3800,7 @@ jquery-ujs@^1.2.3:
   resolved "https://registry.yarnpkg.com/jquery-ujs/-/jquery-ujs-1.2.3.tgz#dcac6026ab7268e5ee41faf9d31c997cd4ddd603"
   integrity sha512-59wvfx5vcCTHMeQT1/OwFiAj+UffLIwjRIoXdpO7Z7BCFGepzq9T9oLVeoItjTqjoXfUrHJvV7QU6pUR+UzOoA==
 
-jquery@^3.6.0:
+jquery@>=1.7.2, jquery@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
@@ -6039,6 +6044,26 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+slick-animation@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/slick-animation/-/slick-animation-0.3.3.tgz#e56d961a18ae2fedeeb62ae21cc317b13cbeebfb"
+  integrity sha512-EdnxYiIUpWMATzAL2vF8ZvEBT/nhLJlNyZnOfHxcT05C5r4qEMx1vrXYFLWsmCTu5PfV4psDcOZdgBmlp0XOzQ==
+  dependencies:
+    animate.css "~3.5.0"
+    slick-carousel "~1.5.9"
+
+slick-carousel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
+  integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
+
+slick-carousel@~1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.5.9.tgz#2bdcae38e7a58e72430e97055bfacc167f3364d3"
+  integrity sha1-K9yuOOeljnJDDpcFW/rMFn8zZNM=
+  dependencies:
+    jquery ">=1.7.2"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

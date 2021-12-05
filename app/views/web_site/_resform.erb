@@ -28,7 +28,7 @@
       <% if edit %>      
          <%= form_with model: @site, url: web_site_path, method: :patch do |form| %>
           <%= form.radio_button :option, 'web' %>Web<br> 
-          <%= form.radio_button :option, 'code' %>Code<br> 
+          <%= form.radio_button :option, 'code'%>Code<br> 
           <%= form.label :topic, "Topic" %>
           <%= form.text_field :topic, class: "form-control" %>
           <%= form.label :language, "Language" %>
@@ -42,15 +42,15 @@
       <% else %>
         <%= form_with model: @site, url: web_site_index_path, method: :post do |form| %>
           <%= form.radio_button :option, 'web' %>Web<br> 
-          <%= form.radio_button :option, 'code' %>Code<br> 
+          <%= form.radio_button :option, 'code', :checked => true %>Code<br> 
           <%= form.label :topic, "Topic" %>
-          <%= form.text_field :topic, class: "form-control" %>
+          <%= form.text_field :topic, class: "form-control", :required => true %>
           <%= form.label :language, "Language" %>
-          <%= form.text_field :language, class: "form-control" %>
+          <%= form.text_field :language, class: "form-control", :required => true %>
           <%= form.label :address, "Address" %>
-          <%= form.text_field :address, class: "form-control" %>
+          <%= form.text_field :address, class: "form-control", :required => true  %>
           <%= form.label :description, "Description" %>
-          <%= form.text_area :description, rows: 8, class: "form-control" %>
+          <%= form.text_area :description, rows: 8, class: "form-control", :required => true %>
           <%= form.submit "Submit" %>
         <% end %>
       <% end %>
