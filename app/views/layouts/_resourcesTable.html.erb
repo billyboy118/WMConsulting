@@ -11,35 +11,35 @@
         <%= button_to 'Create New Entry', new_web_site_path, method: :get %>
       <% end %>
       <br>
-
-      <table class="table align-middle table-striped">
-        <thead>
-          <tr>
-            <th>Topic</th>
-            <th>Language</th>
-            <th>Description</th>
-            <th>Web Address</th>
-            <th colspan="2"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @sites.each do |site| 
-          
-          next if site.option != type %>
+      <div class="table-responsive">
+        <table class="table align-middle table-striped">
+          <thead>
             <tr>
-              <td><%= site.topic %></td>
-              <td><%= site.language %></td>
-              <td style="white-space:pre"><%= site.description %></td>
-              <td><%= site.address %></td>
-               <% if current_user && current_user.admin == true %>
-                <td><%= link_to 'Edit', edit_web_site_path(site) %></td>
-                <td><%= link_to 'Delete', web_site_path(site), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <% end %>
+              <th>Topic</th>
+              <th>Language</th>
+              <th>Description</th>
+              <th>Web Address</th>
+              <th colspan="2"></th>
             </tr>
-          <% end %>
-  </tbody>
-
-  </table>
+          </thead>
+          <tbody>
+            <% @sites.each do |site| 
+            
+            next if site.option != type %>
+              <tr>
+                <td><%= site.topic %></td>
+                <td><%= site.language %></td>
+                <td style="white-space:pre break-text"><%= site.description %></td>
+                <td style="break-text"><%= site.address %></td>
+                <% if current_user && current_user.admin == true %>
+                  <td><%= link_to 'Edit', edit_web_site_path(site) %></td>
+                  <td><%= link_to 'Delete', web_site_path(site), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
 
    <br>
