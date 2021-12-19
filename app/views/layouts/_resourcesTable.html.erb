@@ -32,9 +32,9 @@
               <tr>
                 <td><%= site.topic %></td>
                 <td><%= site.language %></td>
-                <td style="white-space:pre break-text"><%= site.description %></td>
+                <td style="white-space:pre-line; word-break: break-all"><%= site.description %></td>
                 <% if type == "code"%>
-                  <td style="white-space:pre break-text"><%= site.example %></td>
+                  <td style="white-space:pre-line; word-break: break-all"><%= site.example %></td>
                 <% end %>
 
                 <td style="break-text"><%= site.address %></td>
