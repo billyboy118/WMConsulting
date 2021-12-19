@@ -18,6 +18,9 @@
               <th>Topic</th>
               <th>Language</th>
               <th>Description</th>
+              <% if type == "code" %>
+                <th>Code</th>
+              <% end %>
               <th>Web Address</th>
               <th colspan="2"></th>
             </tr>
@@ -30,6 +33,10 @@
                 <td><%= site.topic %></td>
                 <td><%= site.language %></td>
                 <td style="white-space:pre break-text"><%= site.description %></td>
+                <% if type == "code"%>
+                  <td><%= site.example %></td>
+                <% end %>
+
                 <td style="break-text"><%= site.address %></td>
                 <% if current_user && current_user.admin == true %>
                   <td><%= link_to 'Edit', edit_web_site_path(site) %></td>
