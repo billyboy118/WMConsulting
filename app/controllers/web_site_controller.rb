@@ -52,6 +52,6 @@ class WebSiteController < ApplicationController
   private
 
   def site_params
-    params.require(:site).permit(:topic, :language, :description, :address, :option)
+    params.require(:site).permit(:topic, :language, :description, :address, :option, :example)
   end
 end

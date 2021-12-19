@@ -34,9 +34,11 @@
           <%= form.label :language, "Language" %>
           <%= form.text_field :language, class: "form-control" %>
           <%= form.label :address, "Address" %>
-          <%= form.text_field :address, class: "form-control" %>
+          <%= form.text_area :address, rows: 3,  class: "form-control" %>
           <%= form.label :description, "Description" %>
-          <%= form.text_area :description, rows: 8, class: "form-control" %>
+          <%= form.text_area :description, rows: 3, class: "form-control" %>
+          <%= form.label :example, "Example" %>
+          <%= form.text_area :example, rows: 3, class: "form-control" %>
           <%= form.submit "Submit" %>
         <% end %>
       <% else %>
@@ -48,9 +50,11 @@
           <%= form.label :language, "Language" %>
           <%= form.text_field :language, class: "form-control", :required => true %>
           <%= form.label :address, "Address" %>
-          <%= form.text_field :address, class: "form-control", :required => true  %>
+          <%= form.text_area :address, rows: 3, class: "form-control", :required => true  %>
           <%= form.label :description, "Description" %>
-          <%= form.text_area :description, rows: 8, class: "form-control", :required => true %>
+          <%= form.text_area :description, rows: 3, class: "form-control", :required => true %>
+          <%= form.label :example, "Example" %>
+          <%= form.text_area :example, rows: 3, class: "form-control" %>
           <%= form.submit "Submit" %>
         <% end %>
       <% end %>
