@@ -30,14 +30,14 @@
             
             next if site.option != type %>
               <tr>
-                <td><%= site.topic %></td>
-                <td><%= site.language %></td>
-                <td style="white-space:pre-line; word-break: break-all"><%= site.description %></td>
+                <td class="tidy-text"><%= site.topic %></td>
+                <td class="tidy-text"><%= site.language %></td>
+                <td class="tidy-text"><%= site.description %></td>
                 <% if type == "code"%>
-                  <td style="white-space:pre-line; word-break: break-all"><%= site.example %></td>
+                  <td class="tidy-text"><%= site.example %></td>
                 <% end %>
 
-                <td style="break-text"><%= site.address %></td>
+                <td class="tidy-text"><%= site.address %></td>
                 <% if current_user && current_user.admin == true %>
                   <td><%= link_to 'Edit', edit_web_site_path(site) %></td>
                   <td><%= link_to 'Delete', web_site_path(site), method: :delete, data: { confirm: 'Are you sure?' } %></td>
