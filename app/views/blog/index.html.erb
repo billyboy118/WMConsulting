@@ -1,1 +1,14 @@
 <%= render "layouts/banner", imgClass: "single-page-header", title: "Blog" %>
+
+<div class="container">
+
+  <% if current_user%>
+    <%= button_to 'Create New Blog',  new_blog_path, method: :get, :class => "mt-4 btn btn-primary btn-block" %>
+  <% end %>
+
+
+  <p class="pt-4 row col-lg-6">
+  This is the Free Freelancer blog. I have never been one for writing but throughout lockdown I started to create a website preceeding this to which I had written a fair 
+  amount of content, I didn't want all of this to go to waste so I created this blog.
+  </p>
+</div>
