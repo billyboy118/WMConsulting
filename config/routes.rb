@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :contact, only: [:create, :index]
   resources :resources, only: [:index]
   resources :web_site, except: [:show]
-  
+  resources :blog
 end
