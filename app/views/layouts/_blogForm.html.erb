@@ -1,0 +1,16 @@
+<%= form_with model: @blog, url: blog_index_path, method: :post do |form|  %>
+          <%= p "Author's Name: #{current_user.name}"%>
+          <br>
+          <br>
+     
+          <%= form.label :title, "Title" %>
+          <%= form.text_field :title, class: "form-control", :required => true %>
+
+          <%= form.label :category, "Catagory" %>
+          <%= form.text_field :category, class: "form-control", :required => true %>
+          
+          <%= form.label :body, "Body", class: "pt-3" %>
+          <%= form.rich_text_area :body, class: "form-control nicEdit-main trix-editor ", :required => true %>
+
+          <%= form.submit 'Post Blog', class: "mt-3 btn btn-primary  btn-block" %>
+<% end %>

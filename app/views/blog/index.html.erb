@@ -2,13 +2,46 @@
 
 <div class="container">
 
+  <div class="mt-4">
+    <%= render "layouts/alerts" %>
+  </div>
+  
   <% if current_user%>
-    <%= button_to 'Create New Blog',  new_blog_path, method: :get, :class => "mt-4 btn btn-primary btn-block" %>
+    <%= button_to 'Create New Blog',  new_blog_path, method: :get, :class => "mt-2 btn btn-primary btn-block" %>
   <% end %>
 
 
-  <p class="pt-4 row col-lg-6">
-  This is the Free Freelancer blog. I have never been one for writing but throughout lockdown I started to create a website preceeding this to which I had written a fair 
+  <p class="pt-4 col-lg-6">
+  I have never been one for writing but throughout lockdown I started to create a website preceeding this to which I had written a fair 
   amount of content, I didn't want all of this to go to waste so I created this blog.
   </p>
+
+
+  <% @blogs.each do |blog| %>
+
+    <h1 class="pt-4"> <%= blog.title %> </h1>
+    
+    <p>By: <%= blog.user.name %> / <%= blog.created_at.strftime('%d-%m-%Y') %></p>
+    <p> <b>Summary:</b> <%= blog.category %></p>
+    
+    <ul class="list-inline wow fadeInUp" >
+      <li class="list-inline-item">
+       <%= button_to 'Read on',  blog, method: :get, :class => "mb-4 btn btn-primary btn-block" %> 
+      </li>
+      <% if current_user%>
+        <li class="list-inline-item"> 
+          <%= button_to 'Edit',  edit_blog_path(blog), method: :get, :class => "mb-4 btn btn-primary btn-block" %>
+        </li>
+        <li class="list-inline-item"> 
+          <%= button_to 'Delete',  blog, method: :delete, data: { confirm: 'Are you sure?' }, :class => "mb-4 btn btn-primary btn-block" %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+
+
+
+
+
 </div>

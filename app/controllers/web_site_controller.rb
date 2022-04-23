@@ -37,7 +37,6 @@ class WebSiteController < ApplicationController
 
   def create
     @site = Site.new(site_params)
-
     if @site.save
       if @site.option == 'web'
         redirect_to web_site_index_path, notice: 'Entry Saved'
